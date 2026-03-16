@@ -6,9 +6,9 @@ import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CTASection from '@/components/sections/CTASection';
 
 export const metadata: Metadata = {
-  title: 'Alex Chen — Senior Product Manager',
+  title: 'Ashwini Borle — Senior Technical Product Manager',
   description:
-    'Senior Product Manager with 8+ years building B2B SaaS, digital health, and fintech products. Specializing in product strategy, cross-functional leadership, and data-driven growth.',
+    'Senior Technical Product Manager with 14+ years in global fintech and data platforms. Specializing in data platform strategy, PCI/PII compliance, AI-driven automation and scalable enterprise systems.',
 };
 
 export default function HomePage() {

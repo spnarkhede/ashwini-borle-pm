@@ -3,6 +3,16 @@
 import { useState, useEffect, useCallback } from 'react';
 import { testimonials } from '@/data/testimonials';
 
+const AVATAR_COLORS = [
+  '#1a2b4a',
+  '#0ea5a0',
+  '#7c3aed',
+  '#d97706',
+  '#059669',
+  '#dc2626',
+  '#0284c7',
+];
+
 export default function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -42,19 +52,19 @@ export default function TestimonialsSection() {
         {/* Header */}
         <div className="text-center mb-14">
           <p className="text-sm font-semibold text-[#0ea5a0] dark:text-[#14b8a6] uppercase tracking-wider mb-3">
-            Client Testimonials
+            LinkedIn Recommendations
           </p>
           <h2
             id="testimonials-heading"
             className="font-heading font-bold text-3xl md:text-4xl text-[#1f2937] dark:text-[#f8fafc] mb-4"
           >
-            What Leaders Say
+            What Colleagues Say
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-[#0ea5a0] to-[#d4af37] rounded-full mx-auto" aria-hidden="true" />
         </div>
 
         {/* Testimonial Carousel */}
-        <div className="max-w-4xl mx-auto" role="region" aria-label="Client testimonials slider" aria-live="polite">
+        <div className="max-w-4xl mx-auto" role="region" aria-label="LinkedIn recommendations slider" aria-live="polite">
           <div
             className={`transition-all duration-400 ${
               isAnimating ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'
@@ -84,21 +94,26 @@ export default function TestimonialsSection() {
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center gap-4">
-                <div
-                  className="w-12 h-12 rounded-2xl flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
-                  style={{
-                    background: `hsl(${testimonials.indexOf(t) * 60 + 200}, 60%, 45%)`,
-                  }}
-                  aria-hidden="true"
-                >
-                  {t.avatar}
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <div className="flex items-center gap-4">
+                  <div
+                    className="w-12 h-12 rounded-2xl flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
+                    style={{ backgroundColor: AVATAR_COLORS[current % AVATAR_COLORS.length] }}
+                    aria-hidden="true"
+                  >
+                    {t.avatar}
+                  </div>
+                  <div>
+                    <p className="font-heading font-semibold text-[#1f2937] dark:text-[#f8fafc]">{t.name}</p>
+                    <p className="text-sm text-[#6b7280] dark:text-[#94a3b8]">
+                      {t.role} &middot; {t.company}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-heading font-semibold text-[#1f2937] dark:text-[#f8fafc]">{t.name}</p>
-                  <p className="text-sm text-[#6b7280] dark:text-[#94a3b8]">
-                    {t.role} &middot; {t.company}
-                  </p>
+                {/* LinkedIn-style meta */}
+                <div className="text-right">
+                  <p className="text-xs text-[#6b7280] dark:text-[#94a3b8]">{t.relationship}</p>
+                  <p className="text-xs text-[#9ca3af] dark:text-[#64748b] mt-0.5">{t.date}</p>
                 </div>
               </div>
             </div>
@@ -107,13 +122,13 @@ export default function TestimonialsSection() {
           {/* Controls */}
           <div className="flex items-center justify-between mt-8">
             {/* Dots */}
-            <div className="flex items-center gap-2" role="tablist" aria-label="Testimonial navigation">
+            <div className="flex items-center gap-2 flex-wrap" role="tablist" aria-label="Recommendation navigation">
               {testimonials.map((_, i) => (
                 <button
                   key={i}
                   role="tab"
                   aria-selected={i === current}
-                  aria-label={`View testimonial ${i + 1}`}
+                  aria-label={`View recommendation ${i + 1}`}
                   onClick={() => goTo(i)}
                   className={`transition-all duration-200 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0ea5a0] ${
                     i === current
@@ -128,7 +143,7 @@ export default function TestimonialsSection() {
             <div className="flex items-center gap-3">
               <button
                 onClick={prev}
-                aria-label="Previous testimonial"
+                aria-label="Previous recommendation"
                 className="w-10 h-10 rounded-xl border border-[#e5e7eb] dark:border-[#334155] flex items-center justify-center text-[#6b7280] dark:text-[#94a3b8] hover:bg-[#f9fafb] dark:hover:bg-[#1e293b] hover:text-[#1f2937] dark:hover:text-[#f8fafc] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0ea5a0]"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -137,7 +152,7 @@ export default function TestimonialsSection() {
               </button>
               <button
                 onClick={next}
-                aria-label="Next testimonial"
+                aria-label="Next recommendation"
                 className="w-10 h-10 rounded-xl bg-[#1a2b4a] dark:bg-[#3b82f6] flex items-center justify-center text-white hover:bg-[#243d6b] dark:hover:bg-[#2563eb] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0ea5a0] shadow-sm hover:shadow-md"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -146,6 +161,11 @@ export default function TestimonialsSection() {
               </button>
             </div>
           </div>
+
+          {/* Count indicator */}
+          <p className="text-center text-xs text-[#9ca3af] dark:text-[#64748b] mt-4">
+            {current + 1} of {testimonials.length} recommendations
+          </p>
         </div>
       </div>
     </section>

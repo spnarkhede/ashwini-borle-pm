@@ -8,11 +8,8 @@ export default function HeroSection() {
     >
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        {/* Top right blob */}
         <div className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-gradient-to-br from-[#0ea5a0]/10 to-[#1a2b4a]/8 dark:from-[#14b8a6]/10 dark:to-[#3b82f6]/8 blur-3xl" />
-        {/* Bottom left blob */}
         <div className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-gradient-to-tr from-[#d4af37]/8 to-[#0ea5a0]/8 dark:from-[#d4af37]/8 dark:to-[#14b8a6]/8 blur-3xl" />
-        {/* Grid pattern */}
         <div
           className="absolute inset-0 opacity-[0.025] dark:opacity-[0.04]"
           style={{
@@ -37,10 +34,10 @@ export default function HeroSection() {
 
             {/* Name */}
             <h1 className="font-heading font-bold text-5xl sm:text-6xl lg:text-7xl text-[#1f2937] dark:text-[#f8fafc] leading-[1.05] mb-4">
-              Alex{' '}
+              Ashwini{' '}
               <span className="relative inline-block">
                 <span className="relative z-10 bg-gradient-to-r from-[#0ea5a0] to-[#1a2b4a] dark:from-[#14b8a6] dark:to-[#3b82f6] bg-clip-text text-transparent">
-                  Chen
+                  Borle
                 </span>
                 <span
                   className="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-[#0ea5a0] to-[#d4af37] rounded-full opacity-60"
@@ -51,13 +48,13 @@ export default function HeroSection() {
 
             {/* Title */}
             <p className="font-heading font-semibold text-xl sm:text-2xl text-[#1a2b4a] dark:text-[#3b82f6] mb-4">
-              Senior Product Manager
+              Senior Technical Product Manager
             </p>
 
             {/* Tagline */}
             <p className="text-lg sm:text-xl text-[#6b7280] dark:text-[#94a3b8] leading-relaxed mb-8 max-w-lg">
-              Turning complex problems into elegant product solutions — from zero-to-one startups to
-              enterprise-scale transformations.
+              Bridging the gap between business intent and engineering execution — turning complex data
+              platforms and fintech infrastructure into products that are scalable, secure and valuable.
             </p>
 
             {/* CTA Buttons */}
@@ -67,12 +64,7 @@ export default function HeroSection() {
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#1a2b4a] dark:bg-[#3b82f6] text-white font-semibold rounded-xl hover:bg-[#243d6b] dark:hover:bg-[#2563eb] transition-all duration-200 shadow-sm hover:shadow-lg hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0ea5a0] focus-visible:ring-offset-2"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
                 Schedule Consultation
               </Link>
@@ -91,13 +83,11 @@ export default function HeroSection() {
             {/* Social proof */}
             <div className="flex flex-wrap items-center gap-6 text-sm text-[#6b7280] dark:text-[#94a3b8]">
               <div className="flex -space-x-2">
-                {['SM', 'DP', 'JT', 'MT'].map((initials, i) => (
+                {['BC', 'KR', 'PG', 'VC'].map((initials, i) => (
                   <div
                     key={i}
                     className="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold border-2 border-white dark:border-[#0f172a] shadow-sm"
-                    style={{
-                      background: `hsl(${i * 60 + 200}, 60%, 45%)`,
-                    }}
+                    style={{ background: `hsl(${i * 60 + 200}, 60%, 45%)` }}
                     aria-hidden="true"
                   >
                     {initials[0]}
@@ -105,7 +95,7 @@ export default function HeroSection() {
                 ))}
               </div>
               <span>
-                <strong className="text-[#1f2937] dark:text-[#f8fafc]">4.9/5</strong> from 40+ client reviews
+                Trusted by teams at <strong className="text-[#1f2937] dark:text-[#f8fafc]">Mastercard, IBM & more</strong>
               </span>
             </div>
           </div>
@@ -118,11 +108,11 @@ export default function HeroSection() {
                 {/* Profile area */}
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#1a2b4a] to-[#0ea5a0] dark:from-[#3b82f6] dark:to-[#14b8a6] flex items-center justify-center flex-shrink-0 shadow-lg">
-                    <span className="text-white font-bold text-xl font-heading">AC</span>
+                    <span className="text-white font-bold text-xl font-heading">AB</span>
                   </div>
                   <div>
-                    <p className="font-heading font-bold text-[#1f2937] dark:text-[#f8fafc]">Alex Chen</p>
-                    <p className="text-sm text-[#6b7280] dark:text-[#94a3b8]">Senior PM @ CloudBridge</p>
+                    <p className="font-heading font-bold text-[#1f2937] dark:text-[#f8fafc]">Ashwini Borle</p>
+                    <p className="text-sm text-[#6b7280] dark:text-[#94a3b8]">Senior TPM @ Mastercard</p>
                     <div className="flex items-center gap-1 mt-1">
                       {[1, 2, 3, 4, 5].map((s) => (
                         <svg key={s} className="w-3 h-3 text-[#d4af37]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -136,10 +126,10 @@ export default function HeroSection() {
                 {/* Stats mini grid */}
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   {[
-                    { label: 'Products Launched', value: '40+' },
-                    { label: 'Revenue Impact', value: '$50M+' },
-                    { label: 'Years Experience', value: '8+' },
-                    { label: 'Industries', value: '15+' },
+                    { label: 'Years Experience', value: '14+' },
+                    { label: 'Global Platforms', value: '5' },
+                    { label: 'Incident Reduction', value: '40%' },
+                    { label: 'Efficiency Gain', value: '60%' },
                   ].map((stat) => (
                     <div
                       key={stat.label}
@@ -154,9 +144,9 @@ export default function HeroSection() {
                 {/* Skill bars mini */}
                 <div className="space-y-2.5">
                   {[
-                    { name: 'Product Strategy', pct: 95 },
-                    { name: 'Data Analytics', pct: 88 },
-                    { name: 'Team Leadership', pct: 93 },
+                    { name: 'Data Platform Strategy', pct: 95 },
+                    { name: 'Compliance & Governance', pct: 90 },
+                    { name: 'Cross-functional Leadership', pct: 92 },
                   ].map((skill) => (
                     <div key={skill.name}>
                       <div className="flex justify-between items-center mb-1">
@@ -189,8 +179,8 @@ export default function HeroSection() {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-[#1f2937] dark:text-[#f8fafc]">Top Rated</p>
-                  <p className="text-xs text-[#6b7280] dark:text-[#94a3b8]">4.9/5 Rating</p>
+                  <p className="text-xs font-bold text-[#1f2937] dark:text-[#f8fafc]">Mastercard</p>
+                  <p className="text-xs text-[#6b7280] dark:text-[#94a3b8]">Senior TPM</p>
                 </div>
               </div>
 

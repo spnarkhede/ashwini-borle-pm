@@ -11,36 +11,42 @@ export default function ScrollAnimationProvider({
   children: React.ReactNode;
 }) {
   useEffect(() => {
-    let rafId: number;
-    let observer: IntersectionObserver;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
 
-    // requestAnimationFrame fires right after the browser paints the frame,
-    // so the observer immediately detects elements already in the viewport.
-    rafId = requestAnimationFrame(() => {
-      observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.05 }
-      );
-
+    function observeAll() {
       document.querySelectorAll<Element>(SELECTOR).forEach((el) => {
-        if (!el.classList.contains('is-visible')) {
-          observer.observe(el);
-        }
+        if (!el.classList.contains('is-visible')) io.observe(el);
       });
+    }
+
+    // Observe elements already in the DOM after the first paint
+    const raf = requestAnimationFrame(observeAll);
+
+    // Watch for new page elements added during client-side navigation
+    let debounceTimer: ReturnType<typeof setTimeout>;
+    const mo = new MutationObserver(() => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(observeAll, 50);
     });
+    mo.observe(document.body, { childList: true, subtree: true });
 
     return () => {
-      cancelAnimationFrame(rafId);
-      observer?.disconnect();
+      cancelAnimationFrame(raf);
+      clearTimeout(debounceTimer);
+      io.disconnect();
+      mo.disconnect();
     };
-  }, [children]);
+  }, []); // run once — MutationObserver handles subsequent navigation
 
   return <>{children}</>;
 }

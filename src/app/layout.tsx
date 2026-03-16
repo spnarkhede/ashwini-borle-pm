@@ -1,41 +1,58 @@
 import type { Metadata } from 'next';
+import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/context/ThemeContext';
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  display: 'swap',
+  variable: '--font-inter',
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  display: 'swap',
+  variable: '--font-poppins',
+});
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
 import ScrollAnimationProvider from '@/components/providers/ScrollAnimationProvider';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Alex Chen — Senior Product Manager',
-    template: '%s | Alex Chen',
+    default: 'Ashwini Borle — Senior Technical Product Manager',
+    template: '%s | Ashwini Borle',
   },
   description:
-    'Senior Product Manager with 8+ years building B2B SaaS, digital health, and fintech products. Specializing in product strategy, cross-functional leadership, and data-driven growth.',
+    'Senior Technical Product Manager with 14+ years in global fintech, data platforms and AI-driven automation. Specializing in data platform strategy, PCI/PII compliance and scalable enterprise systems.',
   keywords: [
-    'Product Manager',
-    'Senior PM',
-    'Product Strategy',
-    'B2B SaaS',
-    'Digital Health',
+    'Technical Product Manager',
+    'Senior TPM',
+    'Data Platform',
     'Fintech',
-    'Alex Chen',
+    'Mastercard',
+    'AI Automation',
+    'Ashwini Borle',
+    'Product Strategy',
+    'PCI Compliance',
   ],
-  authors: [{ name: 'Alex Chen' }],
-  creator: 'Alex Chen',
+  authors: [{ name: 'Ashwini Borle' }],
+  creator: 'Ashwini Borle',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Alex Chen — Senior Product Manager',
-    title: 'Alex Chen — Senior Product Manager',
+    siteName: 'Ashwini Borle — Senior Technical Product Manager',
+    title: 'Ashwini Borle — Senior Technical Product Manager',
     description:
-      'Senior Product Manager with 8+ years building B2B SaaS, digital health, and fintech products.',
+      'Senior Technical Product Manager with 14+ years in global fintech, data platforms and AI-driven automation at Mastercard, IBM and more.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alex Chen — Senior Product Manager',
+    title: 'Ashwini Borle — Senior Technical Product Manager',
     description:
-      'Senior Product Manager with 8+ years building B2B SaaS, digital health, and fintech products.',
+      'Senior Technical Product Manager with 14+ years in global fintech, data platforms and AI-driven automation.',
   },
   robots: {
     index: true,
@@ -49,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
       <body className="font-body antialiased">
         <ThemeProvider>
           <ScrollAnimationProvider>

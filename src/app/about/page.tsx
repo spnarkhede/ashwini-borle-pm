@@ -4,29 +4,29 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about Alex Chen — Senior Product Manager with 8+ years of experience in B2B SaaS, digital health, and fintech. Mission, values, and what drives great product work.',
+    "Learn about Ashwini Borle — Senior Technical Product Manager with 14+ years bridging business intent and engineering execution across Mastercard, IBM, Vodafone and more.",
 };
 
 const values = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
       </svg>
     ),
-    title: 'Users First',
+    title: 'Technical Depth',
     description:
-      "Every product decision starts with a clear understanding of who we're building for and what problem we're solving. Opinions are cheap; user insight is priceless.",
+      "I operate comfortably at the level of data pipelines, APIs, ETL systems and cloud architecture — not to write the code, but to translate technical constraints into product direction that engineering teams can execute confidently.",
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    title: 'Data-Informed',
+    title: 'Compliance by Design',
     description:
-      'I follow the data where it leads — even when it contradicts my instincts. Good product intuition is shaped by disciplined measurement, not in spite of it.',
+      "In regulated environments like payments and fintech, compliance is not a gate at the end of delivery — it is an architectural constraint from day one. I embed PCI, PII and governance requirements into discovery, not just UAT.",
   },
   {
     icon: (
@@ -34,28 +34,30 @@ const values = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: 'Bias for Action',
+    title: 'Bias for Outcomes',
     description:
-      'Velocity matters. A good decision today beats a perfect decision next month. I ship, learn, and iterate — not plan, plan, and plan some more.',
+      "I measure success in production incidents reduced, release timelines accelerated, and operational overhead eliminated — not in features shipped or PRDs written. The platform is only as good as the business outcomes it enables.",
   },
   {
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
-    title: 'Radical Transparency',
+    title: 'Bridge Builder',
     description:
-      'Trust is built through honest communication — especially when the news is bad. I believe in surfacing problems early and making the reasoning behind decisions visible.',
+      "My core value is translation — turning complex architecture into clear product direction for business, and turning business priorities into precise technical requirements for engineering. I live at that intersection by choice.",
   },
 ];
 
 const highlights = [
-  { label: 'Years of Experience', value: '8+' },
-  { label: 'Products Shipped', value: '40+' },
-  { label: 'Revenue Influenced', value: '$50M+' },
-  { label: 'Industries', value: '15+' },
+  { label: 'Years of Experience', value: '14+' },
+  { label: 'Global Data Platforms', value: '5' },
+  { label: 'Production Incident Reduction', value: '40%' },
+  { label: 'Operational Efficiency Gain', value: '60%' },
 ];
+
+const companies = ['Mastercard', 'IBM', 'Tech Mahindra', 'Vodafone Idea', 'Infosys'];
 
 export default function AboutPage() {
   return (
@@ -74,28 +76,47 @@ export default function AboutPage() {
                 About Me
               </span>
               <h1 className="font-heading text-4xl md:text-5xl font-bold text-[#1f2937] dark:text-[#f8fafc] mb-6 leading-tight">
-                Building products that{' '}
-                <span className="text-gradient">actually matter</span>
+                Closing the gap between{' '}
+                <span className="text-gradient">intent and execution</span>
               </h1>
               <div className="space-y-4 text-[#6b7280] dark:text-[#94a3b8] text-lg leading-relaxed">
                 <p>
-                  I'm Alex Chen — a Senior Product Manager based in San Francisco with over 8 years of experience
-                  turning complex problems into products people love. I've worked across B2B SaaS, digital health,
-                  and fintech, building products that have collectively impacted hundreds of thousands of users and
-                  generated over $50M in revenue.
+                  Most complex platforms fail not because of bad technology, but because the gap between business
+                  intent and engineering execution is never fully bridged. That is the gap I have spent 14+ years
+                  solving.
                 </p>
                 <p>
-                  My path to product management started in engineering and consulting — a combination that gave me
-                  a rare ability to speak fluently with both technical teams and business stakeholders. I hold a
-                  dual B.S./MBA from Cornell University and have spent my career at the intersection of strategy
-                  and execution.
+                  I am a Senior Technical Product Manager based in Pune, India, currently at Mastercard where I
+                  own product strategy and delivery for 5 global data platforms powering payment ecosystems
+                  across multiple regulatory regions. My role sits at the intersection of engineering, data
+                  architecture, compliance and product strategy.
                 </p>
                 <p>
-                  When I'm not shipping products, I'm writing about product management, mentoring early-career PMs,
-                  and hunting for great coffee shops in the Mission District.
+                  What differentiates my work is that I operate comfortably in both worlds — strategic product
+                  thinking and deep technical understanding of data pipelines, APIs, ETL systems and cloud
+                  data platforms. That combination allows me to translate complex architecture into clear
+                  product direction that engineering teams can execute and businesses can benefit from.
                 </p>
               </div>
-              <div className="mt-8 flex flex-wrap gap-4">
+
+              {/* Companies */}
+              <div className="mt-6 mb-8">
+                <p className="text-xs font-semibold text-[#6b7280] dark:text-[#94a3b8] uppercase tracking-wider mb-3">
+                  Experience across
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {companies.map((c) => (
+                    <span
+                      key={c}
+                      className="px-3 py-1 rounded-full bg-[#f9fafb] dark:bg-[#1e293b] border border-[#e5e7eb] dark:border-[#334155] text-xs font-semibold text-[#1f2937] dark:text-[#f8fafc]"
+                    >
+                      {c}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-4">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[#1a2b4a] dark:bg-[#3b82f6] text-white font-semibold rounded-xl hover:bg-[#243d6b] dark:hover:bg-[#2563eb] transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0ea5a0] focus-visible:ring-offset-2"
@@ -114,14 +135,12 @@ export default function AboutPage() {
             {/* Profile card */}
             <div className="animate-on-scroll-right">
               <div className="relative">
-                {/* Avatar */}
                 <div className="relative w-64 h-64 md:w-80 md:h-80 mx-auto rounded-3xl bg-gradient-to-br from-[#1a2b4a] to-[#0ea5a0] dark:from-[#3b82f6] dark:to-[#14b8a6] flex items-center justify-center shadow-2xl">
-                  <span className="font-heading font-bold text-white text-8xl md:text-9xl">AC</span>
+                  <span className="font-heading font-bold text-white text-8xl md:text-9xl">AB</span>
                 </div>
-                {/* Floating badge — currently available */}
                 <div className="absolute -bottom-4 -right-4 md:bottom-4 md:right-0 bg-white dark:bg-[#1e293b] rounded-2xl px-4 py-3 shadow-lg border border-[#e5e7eb] dark:border-[#334155]">
                   <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse-slow" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
                     <span className="text-sm font-semibold text-[#1f2937] dark:text-[#f8fafc]">
                       Open to Consulting
                     </span>
@@ -152,10 +171,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 animate-on-scroll">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-[#1f2937] dark:text-[#f8fafc] mb-4">
-              What I believe about great product work
+              What I believe about great platform work
             </h2>
             <p className="text-[#6b7280] dark:text-[#94a3b8] text-lg max-w-2xl mx-auto">
-              These principles have guided every product decision I've made across 8 years and 40+ products.
+              These principles have guided 14+ years of product and platform delivery across global fintech.
             </p>
             <div className="section-divider mt-6" />
           </div>
@@ -185,12 +204,12 @@ export default function AboutPage() {
             My mission
           </h2>
           <blockquote className="text-xl md:text-2xl text-[#6b7280] dark:text-[#94a3b8] italic leading-relaxed border-l-4 border-[#0ea5a0] dark:border-[#14b8a6] pl-6 text-left">
-            "To build products that create genuine value for the people who use them — not just impressive metrics
-            for the people who build them. The best products feel inevitable in hindsight. Getting there requires
-            relentless curiosity, honest measurement, and the courage to kill your darlings."
+            "To be the person who connects the dots between technology, product strategy and measurable
+            business outcomes. Complex platforms should not fail because of communication gaps — and
+            they do not have to, if someone in the room speaks both languages fluently."
           </blockquote>
           <p className="mt-6 font-semibold text-[#1f2937] dark:text-[#f8fafc] text-lg">
-            — Alex Chen
+            — Ashwini Borle
           </p>
         </div>
       </section>
@@ -199,10 +218,10 @@ export default function AboutPage() {
       <section className="py-16 bg-gradient-to-br from-[#1a2b4a] to-[#0ea5a0] dark:from-[#1e293b] dark:to-[#0f172a]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-on-scroll">
           <h2 className="font-heading text-3xl font-bold text-white mb-4">
-            Let's build something great together
+            Building data platforms or fintech infrastructure?
           </h2>
           <p className="text-white/80 text-lg mb-8">
-            I'm available for consulting engagements, advisory roles, and select full-time opportunities.
+            I am available for consulting engagements, advisory roles, and select full-time opportunities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -8,14 +8,7 @@ import { tools } from '@/data/skills';
 export const metadata: Metadata = {
   title: 'Profile',
   description:
-    'Full professional profile of Alex Chen — case studies, skills breakdown, career timeline, and tools. 8+ years building B2B SaaS, digital health, and fintech products.',
-};
-
-const categoryColors: Record<string, string> = {
-  'AI / Machine Learning': '#1a2b4a',
-  'Digital Health': '#0ea5a0',
-  'Fintech / API': '#d4af37',
-  'Platform / Design': '#7c3aed',
+    'Full professional profile of Ashwini Borle — case studies, skills breakdown, career timeline, and tools. 14+ years in global fintech, data platforms and AI-driven automation.',
 };
 
 export default function ProfilePage() {
@@ -31,7 +24,7 @@ export default function ProfilePage() {
             Work & Expertise
           </h1>
           <p className="text-[#6b7280] dark:text-[#94a3b8] text-lg max-w-2xl">
-            A detailed look at the case studies, skills, tools, and career history behind 8+ years of product management.
+            A detailed look at the case studies, skills, tools, and career history behind 14+ years of technical product management in global fintech and data platforms.
           </p>
         </div>
       </section>

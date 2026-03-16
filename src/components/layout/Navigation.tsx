@@ -68,14 +68,14 @@ export default function Navigation() {
             >
               {/* Monogram */}
               <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#1a2b4a] to-[#0ea5a0] dark:from-[#3b82f6] dark:to-[#14b8a6] flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-200">
-                <span className="text-white font-bold text-sm font-heading tracking-tight">AC</span>
+                <span className="text-white font-bold text-sm font-heading tracking-tight">AB</span>
               </div>
               <div className="flex flex-col leading-none">
                 <span className="font-heading font-700 text-sm text-[#1f2937] dark:text-[#f8fafc] group-hover:text-[#0ea5a0] dark:group-hover:text-[#14b8a6] transition-colors duration-200">
-                  Alex Chen
+                  Ashwini Borle
                 </span>
                 <span className="text-[10px] text-[#6b7280] dark:text-[#94a3b8] font-body tracking-wide">
-                  Senior Product Manager
+                  Senior Technical Product Manager
                 </span>
               </div>
             </Link>
@@ -185,10 +185,10 @@ export default function Navigation() {
         <div className="flex items-center justify-between px-6 py-4 border-b border-[#e5e7eb] dark:border-[#334155]">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1a2b4a] to-[#0ea5a0] dark:from-[#3b82f6] dark:to-[#14b8a6] flex items-center justify-center">
-              <span className="text-white font-bold text-xs font-heading">AC</span>
+              <span className="text-white font-bold text-xs font-heading">AB</span>
             </div>
             <span className="font-heading font-semibold text-sm text-[#1f2937] dark:text-[#f8fafc]">
-              Alex Chen
+              Ashwini Borle
             </span>
           </div>
           <button
