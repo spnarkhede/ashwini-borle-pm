@@ -177,15 +177,15 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1);
 }
 
-/* Stagger delays */
-.delay-100 { transition-delay: 100ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-300 { transition-delay: 300ms; }
-.delay-400 { transition-delay: 400ms; }
-.delay-500 { transition-delay: 500ms; }
-.delay-600 { transition-delay: 600ms; }
-.delay-700 { transition-delay: 700ms; }
-.delay-800 { transition-delay: 800ms; }
+/* Stagger delays — applied only once is-visible fires to avoid hiding elements */
+.is-visible.delay-100 { transition-delay: 100ms; }
+.is-visible.delay-200 { transition-delay: 200ms; }
+.is-visible.delay-300 { transition-delay: 300ms; }
+.is-visible.delay-400 { transition-delay: 400ms; }
+.is-visible.delay-500 { transition-delay: 500ms; }
+.is-visible.delay-600 { transition-delay: 600ms; }
+.is-visible.delay-700 { transition-delay: 700ms; }
+.is-visible.delay-800 { transition-delay: 800ms; }
 
 /* ===== CARD HOVER EFFECTS ===== */
 .card-hover {

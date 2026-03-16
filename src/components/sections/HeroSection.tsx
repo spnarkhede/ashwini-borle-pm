@@ -26,7 +26,7 @@ export default function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left: Text content */}
-          <div className="order-2 lg:order-1">
+          <div className="order-1 lg:order-1">
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-[#0ea5a0]/10 dark:bg-[#14b8a6]/10 border border-[#0ea5a0]/20 dark:border-[#14b8a6]/20">
               <span className="w-2 h-2 rounded-full bg-[#0ea5a0] dark:bg-[#14b8a6] animate-pulse" aria-hidden="true" />
@@ -111,7 +111,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right: Abstract Graphic */}
-          <div className="order-1 lg:order-2 flex items-center justify-center">
+          <div className="order-2 lg:order-2 flex items-center justify-center">
             <div className="relative w-full max-w-sm lg:max-w-md xl:max-w-lg">
               {/* Main card */}
               <div className="relative z-10 bg-white dark:bg-[#1e293b] rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.12)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4)] p-8 border border-[#e5e7eb] dark:border-[#334155]">
